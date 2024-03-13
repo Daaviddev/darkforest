@@ -1,0 +1,16 @@
+import { Networks } from "./blockchain";
+
+const AVAX_MAINNET = {
+    MIM_ADDRESS: "0x130966628846BFd36ff31a822705796e8cb8C18D",
+    NATR_ADDRESS: "0x6b0d2a3c37d551963275bB104F045F6a68AB6374",
+    NATR_MANAGER_ADDRESS: "0x4e435a936a623f0f41919e94c2c195110E593d0b",
+    WALLET_OBSERVER_CONTRACT: "0xF3E74d720614236993fa81bb08a125382FC59A16",
+    POOL_MANAGER_ADDRESS: "0x5440235FB0689b1aD755bC1bC5cB1BB07a2538de",
+    DF_MIM_ADDRESS: "0xF99799fC4E8887582431D7565eEDeA5750adB4C6",
+};
+
+export const getAddresses = (networkID: number) => {
+    if (networkID === Networks.AVAX) return AVAX_MAINNET;
+
+    throw Error("Network don't support");
+};
